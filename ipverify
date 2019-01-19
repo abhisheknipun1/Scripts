@@ -17,11 +17,11 @@ echo %octetB%
 echo %octetC%
 echo %octetD%
 
-set num=9
+set num=240
 
 echo %num%
 
-if %octetD% == %num% ( echo This Server is already migrated to Windows 2008 Server, Hence aborting the Job) 
-else ( echo Proceeding with migration)
-
+if %octetD% == %num% ( echo This Server is already migrated to Windows 2008 Server, Hence aborting the Job
+pause
+exit 1) else ( echo This Server is in Windows 2003 Server, hence proceeding with migration)
 pause
